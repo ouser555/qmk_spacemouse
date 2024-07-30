@@ -1,0 +1,31 @@
+
+          report_3dmouse1_t report3dm1;
+          report_3dmouse2_t report3dm2;
+
+
+#if 1
+          report3dm1.x = master.jdx;
+          report3dm1.y = master.jdy;
+          report3dm1.z = 0;
+
+          report3dm2.roll = 0;
+          report3dm2.pitch = 0;
+          report3dm2.yaw = 0;
+#else
+          report3dm1.x = 0;
+          report3dm1.y = 0;
+          report3dm1.z = 0;
+          
+          report3dm2.roll = 0;
+          report3dm2.pitch = master.jdy;
+          report3dm2.yaw = -master.jdx;
+
+          //left_report.x = 0;
+          //left_report.y = 0;
+          //right_report.x = 0;
+          //right_report.y = 0;
+#endif
+          void host_3Dmouse1_send(report_3dmouse1_t *report);
+          void host_3Dmouse2_send(report_3dmouse2_t *report);
+          host_3Dmouse1_send(&report3dm1);
+          host_3Dmouse2_send(&report3dm2);
