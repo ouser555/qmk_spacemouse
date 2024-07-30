@@ -1,6 +1,6 @@
 # qmk_spacemouse
 
-* qmk版本為0.25.8，沒有驗證其他版本能否使用
+* qmk版本為0.25.8，沒有驗證其他版本能否使用，還未驗證vail能否使用
 
 * 新增3dconnexion spacemouse的report descriptor
 
